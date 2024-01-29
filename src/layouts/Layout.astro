@@ -4,14 +4,28 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const description = 'Bienvenido a Clear Dental: Tu hogar para una sonrisa brillante y saludable. Nuestro equipo de dentistas altamente capacitados y amables está comprometido a brindarte la mejor atención odontológica en un ambiente cómodo y acogedor. Desde limpiezas regulares hasta tratamientos de ortodoncia avanzados, estamos aquí para cuidar de todas tus necesidades dentales. Con tecnología de vanguardia y un enfoque personalizado, te ayudaremos a mantener una excelente salud bucal y a recuperar tu confianza en tu sonrisa. Descubre cómo podemos transformar tu salud oral y tu bienestar general hoy mismo en Clear Dental'
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="keywords" content="dentista, salud dental, odontología, ortodoncia, estética dental, limpieza dental, chequeo dental, Harmony Dental Clinic">
+		<meta name="author" content="Leonel Valentín">
+		<meta name="robots" content="index, follow">
+		<!-- Open Graph data -->
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="Web" />
+		<meta property="og:url" content="https://pruebasweb.dentarios.com.mx/" />
+		<meta property="og:image" content="https://pruebasweb.dentarios.com.mx/meta.png" />
+		<meta property="og:description" content={description} />
+		<meta property="og:site_name" content="Harmony Dental Clinic" />
+		<meta property="article:published_time" content="2024-01-25T05:59:00+01:00" />
+		<meta property="article:modified_time" content="2024-01-25T05:59:00+01:00" />
+		<meta property="article:section" content="Clinica dental" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -32,20 +46,14 @@ const { title } = Astro.props;
 			white 60%
 		);
 	}
+	* {
+		box-sizing: border-box;
+		text-decoration: none;
+		scroll-behavior: smooth;
+	}
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
 	}
 </style>
