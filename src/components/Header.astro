@@ -1,0 +1,124 @@
+---
+import Facebook from "./Facebook.astro"
+import Phone from "./Phone.astro"
+import Instagram from "./Instagram.astro"
+---
+<header class="w-full flex justify-center items-center px-4 fixed top-0 right-0 z-[2] bg-[#13151a] transition-all duration-300" id="header">
+  <nav class="w-full flex justify-between items-center max-w-screen-xl h-11 lg:hidden">
+    <div class="flex justify-around items-center flex-col h-7" id="open">
+      <span class=" w-8 h-[1px] bg-white rounded-3xl"></span>
+      <span class=" w-8 h-[1px] bg-white rounded-3xl"></span>
+      <span class=" w-8 h-[1px] bg-white rounded-3xl"></span>
+    </div>
+    <img class="h-full" src="/logo.jpeg" alt="Logo Clear Dental">
+    <a href="http://" target="_blank" rel="noopener noreferrer"><Phone class=" w-7 text-white cursor-pointer"/></a>
+  </nav>
+  <nav class="hidden lg:w-full lg:flex lg:justify-around lg:items-center lg:max-w-screen-xl lg:h-24">
+    <div class="flex justify-center items-center">
+      <a href="/" class=" py-[10px] px-[15px] transition-all rounded-md hover:transition-all hover:bg-orange-400">Inicio</a>
+      <a href="/" class=" py-[10px] px-[15px] transition-all rounded-md hover:transition-all hover:bg-orange-400">Servicios</a>
+      <a href="/" class=" py-[10px] px-[15px] transition-all rounded-md hover:transition-all hover:bg-orange-400">Nosotros</a>
+    </div>
+    <img src="/logo.jpeg" alt="Logo Clear Dental" class="h-full cursor-pointer" id="logo">
+    <div class="flex justify-center items-center">
+      <a href="/" class=" py-[10px] px-[15px] transition-all rounded-md hover:transition-all hover:bg-orange-400">Testimonios</a>
+      <a href="/" class=" py-[10px] px-[15px] transition-all rounded-md hover:transition-all hover:bg-orange-400">Casos</a>
+      <a href="/" class=" py-[10px] px-[15px] transition-all rounded-md hover:transition-all hover:bg-orange-400">Contacto</a>
+    </div>
+  </nav>
+</header>
+<section class=" w-screen h-svh flex justify-center items-center flex-col bg-[url('/bg-menu.jpg')] bg-center bg-cover fixed top-[-100svh] right-0 px-4 z-[1]" aria-expanded="false" id="menu">
+  <div class="w-screen h-svh bg-gray-800/60 flex justify-center items-center flex-col">
+    <nav class="flex justify-around items-center flex-col h-96 font-semibold text-xl">
+      <a href="/">Inicio</a>
+      <a href="/">Nosotros</a>
+      <a href="/">Servicios</a>
+      <a href="/">Testimonios</a>
+      <a href="/">Casos</a>
+      <a href="/" class="px-[30px] py-[10px] bg-yellow-300 rounded-full">Contacto</a>
+      <div class="flex justify-center items-center">
+        <a href="http://" target="_blank" rel="noopener noreferrer"><Facebook class="w-5 text-white mr-3"/></a>
+        <a href="http://" target="_blank" rel="noopener noreferrer"><Instagram class="w-5 text-white"/></a>
+      </div>
+    </nav>
+  </div>
+</section>
+<style>
+  .closemenu {
+    animation: closeMenu 0.4s linear forwards;
+  }
+  .menu {
+    animation: openMenu 0.4s linear forwards;
+  }
+  .header {
+    background-color: transparent;
+    transition: all 0.3s linear;
+  }
+  #open span {
+    transition: all 0.4s linear;
+  }
+  .closeIcon span {
+    transition: all 0.4s linear;
+  }
+  .closeIcon span:nth-child(1) {
+    opacity: 0;
+  }
+  .closeIcon span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  .closeIcon span:nth-child(3) {
+    transform: rotate(135deg) translate(-7px, 6px);
+  }
+  @keyframes openMenu {
+    100% {
+      top: 0;
+    }
+  }
+  @keyframes closeMenu {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: -100svh;
+    }
+  }
+</style>
+<script>
+  const logo = document.getElementById('logo')
+  logo?.addEventListener('click', () => {
+    location.assign('/')
+  })
+  
+  const header = document.getElementById('header')
+  const open = document.getElementById('open')
+  const menu = document.getElementById('menu')
+  let x = menu?.getAttribute('aria-expanded')
+  menu?.addEventListener('click', () => {
+    x = menu?.getAttribute('aria-expanded')
+    open?.classList.toggle('closeIcon')
+    header?.classList.toggle('header')
+    if (x == 'false') {
+      menu?.setAttribute('aria-expanded', 'true')
+      menu?.classList.remove('closemenu')
+      menu?.classList.add('menu')
+    } else {
+      menu?.setAttribute('aria-expanded', 'false')
+      menu?.classList.add('closemenu')
+      menu?.classList.remove('menu')
+    }
+  })
+  open?.addEventListener('click', () => {
+    x = menu?.getAttribute('aria-expanded')
+    open.classList.toggle('closeIcon')
+    header?.classList.toggle('header')
+    if (x == 'false') {
+      menu?.setAttribute('aria-expanded', 'true')
+      menu?.classList.remove('closemenu')
+      menu?.classList.add('menu')
+    } else {
+      menu?.setAttribute('aria-expanded', 'false')
+      menu?.classList.add('closemenu')
+      menu?.classList.remove('menu')
+    }
+  })
+</script>

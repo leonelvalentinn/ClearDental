@@ -1,11 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import { ViewTransitions } from 'astro:transitions';
+import Hero from '../components/Hero.astro';
+import Nosotros from '../components/Nosotros.astro'
+import Services from '../components/Services.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		
-	</main>
+<Layout title="Inicio - Clear Dental">
+	<ViewTransitions />
+	<Header />
+	<Hero />
+	<Nosotros />
+	<Services />
 </Layout>
 
 <style>

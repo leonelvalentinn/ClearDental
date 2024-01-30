@@ -1,0 +1,16 @@
+---
+import Arrow from './Arrow.astro'
+
+interface Props {
+  img: string
+  title: string
+  text: string
+}
+const { img, title, text } = Astro.props
+---
+
+<article class="w-full flex justify-center items-center flex-col">
+  <img src={img} alt="Servicios Imagen" class="w-full">
+  <a class="flex justify-center items-center " href="http://" target="_blank" rel="noopener noreferrer"><h2>{title}</h2> <Arrow class="w-4 ml-2"/></a>
+  <p class="w-full">{text}</p>
+</article>
