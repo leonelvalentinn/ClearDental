@@ -2,22 +2,35 @@
 import Service from "./Service.astro";
 ---
 
-<section class="w-full justify-center items-center px-4">
-  <div class="flex justify-center items-center flex-col">
-    <Service 
-      img="/cepillo.jpg"
-      title="Blanqueamiento"
-      text="lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor"
-    />    
-    <Service 
-      img="/cepillo.jpg"
-      title="Blanqueamiento"
-      text="lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor"
-    /> 
-    <Service 
-      img="/cepillo.jpg"
-      title="Blanqueamiento"
-      text="lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor"
-    /> 
+<section class="w-full flex justify-center items-center px-4">
+  <div class="w-full flex justify-center items-center max-w-6xl flex-col">
+    <div class="flex justify-center items-center flex-col md:grid md:grid-cols-2 md:gap-5 md:place-items-start">
+      <h2 class="font-semibold text-4xl mb-4 md:hidden">Nuestros Tratamientos</h2>
+      <Service 
+        img="/cepillo.jpg"
+        title="Blanqueamiento"
+        text="lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor"
+        subtitle="Nuestros Tratamientos"
+      />    
+      <Service 
+        img="/mandibula.jpg"
+        title="Implantes"
+        text="lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor"
+      /> 
+      <Service 
+        img="/smile.jpg"
+        title="Blanqueamiento"
+        text="lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor"
+      /> 
+      <Service 
+        img="/smile-2.jpg"
+        title="Ortodoncia"
+        text="lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor"
+      /> 
+    </div>
+    <div class="flex justify-center items-center flex-col md:flex-row md:mt-5">
+      <a class="py-[10px] px-[35px] bg-yellow-300 rounded-full mb-3 md:mb-0 md:mr-5 " href="http://" target="_blank" rel="noopener noreferrer">Agenda</a>
+      <a class="py-[10px] px-[35px] bg-yellow-300 rounded-full" href="http://" rel="noopener noreferrer">Conoce más</a>
+    </div>
   </div>
 </section>
