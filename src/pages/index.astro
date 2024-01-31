@@ -5,6 +5,9 @@ import { ViewTransitions } from 'astro:transitions';
 import Hero from '../components/Hero.astro';
 import Nosotros from '../components/Nosotros.astro'
 import Services from '../components/Services.astro';
+import Case from '../components/Case.astro';
+import Dentist from '../components/Dentist.astro';
+import Feature from '../components/Feature.astro';
 ---
 
 <Layout title="Inicio - Clear Dental">
@@ -13,6 +16,48 @@ import Services from '../components/Services.astro';
 	<Hero />
 	<Nosotros />
 	<Services />
+	<section class="flex justify-center items-center w-full flex-col my-12">
+		<h2 class="font-semibold text-4xl mb-4 md:text-6xl md:mb-8">Casos de Éxito</h2>
+		<div class="w-full grid grid-cols-1 gap-5 px-4 max-w-screen-xl md:grid-cols-2 lg:grid-cols-4">
+			<Case 
+				img='/caso.png'
+				tratamiento='Implantología'
+			/>
+			<Case 
+				img='/caso.png'
+				tratamiento='Ortodoncia'
+			/>
+			<Case 
+				img='/caso.png'
+				tratamiento='Limpieza'
+			/>
+			<Case 
+				img='/caso.png'
+				tratamiento='Blanqueamiento'
+			/>
+		</div>
+	</section>
+	<Dentist />
+	<section class="w-full flex justify-center items-center flex-col mt-3 px-4">
+		<h3 class="text-center text-4xl font-semibold md:text-6xl">¿Por qué elegir Clear Dental?</h3>
+		<div class="w-full max-w-screen-xl grid grid-cols-1 gap-8 my-6 place-items-center md:grid-cols-3">
+			<Feature
+				number='1.'
+				title='Amplio Horario'
+				text='Abrimos ininterrumpidamente de lunes a jueves de 8:00 am hasta las 20.00. Los viernes nuestro horario es de 8:00 hasta las 18:00.'
+			/>
+			<Feature 
+				number='2.'
+				title='Excelente calidad'
+				text='Desde el año 2011 y de manera ininterrumpida estamos certificados en el sello de calidad ISO 9001, garantizando a todos nuestros pacientes los máximos estándares de calidad en nuestros servicios. '
+			/>
+			<Feature 
+				number='3.'
+				title='Alta tecnología'
+				text='Nuestra clínica dispone de un flujo 100% digital en todos sus tratamientos para reducir el número de visitas. La utilización de escáneres digitales evita el uso de incómodas pastas de impresión; facilita la fabricación de piezas dentales de cerámica de manera más precisa; permite la colocación de implantes dentales sin dolor y agiliza la fabricación de alineadores en ortodoncia.'
+			/>
+		</div>
+	</section>
 </Layout>
 
 <style>
