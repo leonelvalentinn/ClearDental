@@ -1,7 +1,43 @@
-<footer class="w-full flex justify-center items-center px-4">
-  <div class="w-full flex justify-center items-center flex-col">
-    <img src="/logo.jpeg" alt="Logo">
-    <span>Copyright © 2024 · Harmony Dental</span>
-    <a href="https://dentarios.com.mx" target="_blank" rel="noopener noreferrer">Diseño web y posicionamiento: Dentarios</a>
+---
+import Facebook from "./Facebook.astro";
+import Instagram from "./Instagram.astro";
+---
+
+<footer class="w-full flex justify-center items-center px-4 flex-col">
+  <div class="w-full flex justify-center items-center flex-col py-6 max-w-screen-xl md:flex-row md:justify-evenly">
+    <div class="flex justify-center items-center flex-col">
+      <h3 class="font-semibold text-xl mb-3">Contacto</h3>
+      <p>Clear Dental</p>
+      <p>Direccionon</p>
+      <a href="http://" target="_blank" rel="noopener noreferrer"><strong>Telefóno: </strong>0000000000</a>
+      <a href="http://" target="_blank" rel="noopener noreferrer"><strong>Email: </strong>Email@mail.com</a>
+    </div>
+    <hr class=" w-[200px] bg-white my-8 md:rotate-90 md:w-[100px]">
+    <div class="flex justify-center items-center flex-col">
+      <h3 class="font-semibold text-xl mb-3">Síguenos</h3>
+      <div class="flex justify-center items-center">
+        <a href="http://" target="_blank" rel="noopener noreferrer"><Facebook class="w-5 text-white mr-3 rs"/></a>
+        <a href="http://" target="_blank" rel="noopener noreferrer"><Instagram class="w-5 text-white rs"/></a>
+      </div>
+    </div>
   </div>
+  <hr class="w-full bg-white">
+  <span>Copyright © 2024 · Harmony Dental</span>
+  <a href="https://dentarios.com.mx" target="_blank" rel="noopener noreferrer" class="text-center">Diseño web y posicionamiento: Dentarios</a>
 </footer>
+
+<style>
+  a{
+    transition: all 0.275s ease-in;
+  }
+  a:hover {
+    transition: all 0.275s ease-in;
+  }
+  a:hover .rs {
+    fill: goldenrod;
+    transition: all 0.275s ease-in;
+  }
+  .rs {
+    transition: all 0.275s ease-in;
+  }
+</style>
