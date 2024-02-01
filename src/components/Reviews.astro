@@ -1,0 +1,83 @@
+---
+import Testimonial from "./Testimonial.astro";
+---
+<div class="flex w-full justify-center items-center">
+  <section class="flex w-full justify-center items-center max-w-7xl">
+    <div class="px-4 py-14 flex justify-center items-center flex-col md:flex-row md:w-full" id="Testimonios">
+      <div class="swiper-container relative w-[250px] my-0 mx-auto md:w-[400px] lg:w-[50%]">                          
+        <div class="swiper sample-slider-1">
+          <div class="swiper-wrapper">
+            <Testimonial 
+              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.'
+              img='/cliente2.png'
+              name='Ximena Torres'
+            />
+            <Testimonial 
+              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.'
+              img='/cliente4.png'
+              name='Daniel Peréz'
+            />
+            <Testimonial 
+              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.'
+              img='/cliente5.png'
+              name='Manuel Hernández'
+            />
+            <Testimonial 
+              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.'
+              img='/cliente7.png'
+              name='Susana Méndez'
+            />
+          </div>
+        </div>
+        <div class="swiper-button-prev">
+          <img src="izq.svg" alt="Izquierda">  
+        </div>              
+        <div class="swiper-button-next">
+          <img src="der.svg" alt="Derecha">  
+        </div>    
+        <div class="swiper-pagination"></div>                           
+      </div> 
+    </div>
+  </section>
+</div>
+
+<style> 
+  .swiper-container .swiper-button-prev{
+    left: -30px;
+  }
+  .swiper-container .swiper-button-next{
+    right: -30px;
+  }
+	.swiper-container .swiper-pagination,
+  .swiper-container-1 .swiper-pagination {
+    bottom: -30px!important;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after{
+    content: "" !important;
+  } 
+</style>
+
+<script>
+  import Swiper from 'swiper';
+  import { Autoplay, Pagination, Navigation  } from 'swiper/modules';
+  const swiper = new Swiper('.sample-slider-1', {
+    modules: [Autoplay, Pagination, Navigation ],
+    speed: 400,
+		slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true, 
+    autoplay: {
+      delay: 2000,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>

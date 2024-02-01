@@ -1,0 +1,14 @@
+---
+interface Props {
+  text: string
+  img: string
+  name: string
+}
+const { text, name, img } = Astro.props
+---
+<article class="swiper-slide flex justify-center items-center flex-col">
+  <p class="text-center">"{text}"</p>
+  <hr class=" w-14 my-5">
+  <img class=" rounded-full w-12 h-12" src={img} alt="Foto de perfil cliente">
+  <p class=" text-gray-600 text-sm mt-5">{name}</p>
+</article>

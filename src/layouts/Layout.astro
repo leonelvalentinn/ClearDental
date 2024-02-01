@@ -10,6 +10,7 @@ const description = 'Bienvenido a Clear Dental: Tu hogar para una sonrisa brilla
 <!doctype html>
 <html lang="es">
 	<head>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
@@ -45,6 +46,8 @@ const description = 'Bienvenido a Clear Dental: Tu hogar para una sonrisa brilla
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
+		--gold-100: rgb(219,182,115);
+		--swiper-pagination-color: var(--gold-100);
 	}
 	* {
 		box-sizing: border-box;
