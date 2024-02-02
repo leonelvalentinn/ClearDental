@@ -35,7 +35,7 @@ import Instagram from "./Instagram.astro"
       <a href="#Servicios">Servicios</a>
       <a href="#Testimonios">Testimonios</a>
       <a href="#Casos">Casos</a>
-      <a href="https://wa.me/525539245789?text=Buenas%20tardes,%20solicito%20informaci%C3%B3n%20sobre" class="px-[30px] py-[10px] bg-yellow-300 rounded-full" target="_blank">Contacto</a>
+      <a href="https://wa.me/525539245789?text=Buenas%20tardes,%20solicito%20informaci%C3%B3n%20sobre" class="px-[30px] py-[10px] background rounded-full" target="_blank">Contacto</a>
       <div class="flex justify-center items-center">
         <a href="http://" target="_blank" rel="noopener noreferrer"><Facebook class="w-5 text-white mr-3"/></a>
         <a href="http://" target="_blank" rel="noopener noreferrer"><Instagram class="w-5 text-white"/></a>
@@ -68,6 +68,15 @@ import Instagram from "./Instagram.astro"
   }
   .closeIcon span:nth-child(3) {
     transform: rotate(135deg) translate(-7px, 6px);
+  }
+  .background {
+    background: rgb(236,222,83);
+    background: radial-gradient(circle, rgba(236,222,83,1) 0%, rgba(201,151,46,1) 100%);
+    transition: all 0.275s ease-in-out;
+  }
+  .background:hover {
+    transition: all 0.275s ease-in-out;
+    transform: scale(1.1);
   }
   @keyframes openMenu {
     100% {
