@@ -9,28 +9,40 @@ import Service from "./Service.astro";
       <Service 
         img="/cepillo.jpg"
         title="Blanqueamiento"
-        text="lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor"
+        text="El blanqueamiento dental es un procedimiento seguro y no invasivo que se realiza para eliminar manchas y decoloraciones en los dientes, mejorando su apariencia estética."
         subtitle="Nuestros Tratamientos"
       />    
       <Service 
         img="/mandibula.jpg"
         title="Implantes"
-        text="lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor"
+        text="Un implante dental es una solución permanente y efectiva para reemplazar dientes perdidos. Consiste en un pequeño tornillo de titanio que se inserta en el hueso de la mandíbula, actuando como la raíz del diente."
       /> 
       <Service 
         img="/smile.jpg"
-        title="Blanqueamiento"
-        text="lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor"
+        title="Diseño de sonrisa"
+        text="El diseño de sonrisa es un proceso personalizado que busca mejorar la estética dental y facial de manera integral."
       /> 
       <Service 
         img="/smile-2.jpg"
         title="Ortodoncia"
-        text="lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor"
+        text="La ortodoncia es un tratamiento dental que corrige la posición de los dientes y la mandíbula para mejorar la función masticatoria y la estética de la sonrisa."
       /> 
     </div>
     <div class="flex justify-center items-center flex-col md:flex-row md:mt-5">
-      <a class="py-[10px] px-[35px] bg-yellow-300 rounded-full mb-3 md:mb-0 md:mr-5 " href="http://" target="_blank" rel="noopener noreferrer">Agenda</a>
-      <a class="py-[10px] px-[35px] bg-yellow-300 rounded-full" href="http://" rel="noopener noreferrer">Conoce más</a>
+      <a class="py-[10px] px-[35px] bg-yellow-300 rounded-full background mb-3 md:mb-0 md:mr-5 " href="https://wa.me/525539245789?text=Buenas%20tardes,%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">Agenda</a>
+      <a class="py-[10px] px-[35px] bg-yellow-300 rounded-full background" href="https://wa.me/525539245789?text=Buenas%20tardes,%20solicito%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" id="Casos">Conoce más</a>
     </div>
   </div>
 </section>
+
+<style>
+  .background {
+    background: rgb(236,222,83);
+    background: radial-gradient(circle, rgba(236,222,83,1) 0%, rgba(201,151,46,1) 100%);
+    transition: all 0.275s ease-in-out;
+  }
+  .background:hover {
+    transition: all 0.275s ease-in-out;
+    transform: scale(1.1);
+  }
+</style>

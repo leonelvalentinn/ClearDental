@@ -1,3 +1,23 @@
-<section class="w-full flex justify-center items-center h-[570px] mt-11 lg:mt-24">
+<!--<section class="w-full flex justify-center items-center h-[570px] mt-11 lg:mt-24">
   <video src="/video-bg.mp4" class="h-full w-full object-cover" loop muted autoplay></video>
+</section>-->
+
+<section class="w-full mt-11 h-[570px] background lg:mt-24">
+  
 </section>
+<style>
+  .background {
+    background-image: url(/bg-movil.webp);
+    background-position: center;
+    background-size: cover;
+  }
+  @media (min-width: 768px) {
+    .background {
+      background-image: url(/bg-hero.webp);
+      background-position: top center;
+      background-size: contain;
+      background-color: #efefef;
+      background-repeat: no-repeat;
+    }
+  }
+</style>
