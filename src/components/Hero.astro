@@ -2,22 +2,44 @@
   <video src="/video-bg.mp4" class="h-full w-full object-cover" loop muted autoplay></video>
 </section>-->
 
-<section class="w-full mt-11 h-[570px] background lg:mt-24">
-  
+<section class="w-full flex justify-center items-end mt-11 h-[570px] background lg:mt-24">
+  <div class="text-center pb-10 container-text px-4" id="text">
+    <h1 class="text-bg text-4xl text-transparent font-semibold md:text-6xl">Clear Dental</h1>
+    <h2 class="text-xl font-semibold md:text-4xl">Tu mejor opción en soluciones dentales.</h2>
+  </div>
 </section>
 <style>
+  .text-bg {
+    background: rgb(236,222,83);
+    background: radial-gradient(circle, rgba(236,222,83,1) 0%, rgba(201,151,46,1) 100%);
+    -webkit-background-clip: text;
+  }
+  .container-text {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  .show {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+  }
   .background {
-    background-image: url(/bg-movil.webp);
+    background-image: url(/fondo-home.webp);
     background-position: center;
     background-size: cover;
   }
   @media (min-width: 768px) {
     .background {
-      background-image: url(/bg-hero.webp);
+      background-image: url(/fondo-home.webp);
       background-position: top center;
-      background-size: contain;
+      background-size: cover;
       background-color: #efefef;
       background-repeat: no-repeat;
     }
   }
 </style>
+<script>
+  const text = document.getElementById('text')
+  window.addEventListener('load', () => {
+    text?.classList.add('show')
+  })
+</script>
