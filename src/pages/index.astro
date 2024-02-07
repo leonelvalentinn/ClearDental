@@ -22,26 +22,46 @@ import Footer from '../components/Footer.astro';
 	<section class="flex justify-center items-center w-full flex-col my-12">
 		<h2 class="font-semibold text-4xl mb-4 md:text-6xl md:mb-8">Casos de Éxito</h2>
 		<div class="w-full grid grid-cols-1 gap-5 px-4 max-w-screen-xl md:grid-cols-2 lg:grid-cols-4">
-			<Case 
-				img='/caso.png'
-				tratamiento='Implantología'
-			/>
-			<Case 
-				img='/caso-1.png'
-				tratamiento='Implantología'
-			/>
-			<Case 
-				img='/caso-2.png'
-				tratamiento='Limpieza'
-			/>
-			<Case 
-				img='/caso-3.png'
-				tratamiento='Blanqueamiento'
-			/>
+			<article class=" flex justify-center items-center flex-col relative">
+				<img src='/caso.png' alt="Caso de Éxito" class=" object-cover transition-all duration-300">
+				<a id='caso1' class="-translate-y-20 border-2 italic border-white py-[5px] px-[25px] text-center rounded-full lg:opacity-0" title="Ver más" rel="noopener noreferrer">Implante</a>
+				<div class="absolute top-0 right-0 altura w-full bg-black/70 flex justify-center items-center flex-col modal" id='modal1'>
+					<svg id="close1" class="w-6 absolute top-3 right-3 transition-all cursor-pointer hover:transition-all hover:fill-red-500" xmlns="http://www.w3.org/2000/svg" fill="CurrentColor" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+					<h5 class="text-xl font-semibold pb-3">Implante</h5>
+					<p class="px-4 text-justify">Se realizó un implante dental exitosamente utilizando técnica de injerto óseo previo y posterior colocación del implante de titanio. Sin complicaciones postoperatorias, se espera una óptima integración del implante con el hueso mandibular.</p>
+				</div>
+			</article>
+			<article class=" flex justify-center items-center flex-col relative">
+				<img src='/caso-1.png' alt="Caso de Éxito" class=" object-cover transition-all duration-300">
+				<a id='caso2' class="-translate-y-20 border-2 italic border-white py-[5px] px-[25px] text-center rounded-full lg:opacity-0" title="Ver más" rel="noopener noreferrer">Prótesis</a>
+				<div class="absolute top-0 right-0 altura w-full bg-black/70 flex justify-center items-center flex-col modal" id='modal2'>
+					<svg id="close2" class="w-6 absolute top-3 right-3 transition-all cursor-pointer hover:transition-all hover:fill-red-500" xmlns="http://www.w3.org/2000/svg" fill="CurrentColor" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+					<h5 class="text-xl font-semibold pb-3">Prótesis</h5>
+					<p class="px-4 text-justify">Se realizó la colocación de una prótesis dental completa, con estructura de acrílico y dientes de resina. Adaptación satisfactoria de la prótesis, proporcionando funcionalidad y mejorando la estética del paciente.</p>
+				</div>
+			</article>
+			<article class=" flex justify-center items-center flex-col relative">
+				<img src='/caso-2.png' alt="Caso de Éxito" class=" object-cover transition-all duration-300">
+				<a id='caso3' class="-translate-y-20 border-2 italic border-white py-[5px] px-[25px] text-center rounded-full lg:opacity-0" title="Ver más" rel="noopener noreferrer">Corona</a>
+				<div class="absolute top-0 right-0 altura w-full bg-black/70 flex justify-center items-center flex-col modal" id='modal3'>
+					<svg id="close3" class="w-6 absolute top-3 right-3 transition-all cursor-pointer hover:transition-all hover:fill-red-500" xmlns="http://www.w3.org/2000/svg" fill="CurrentColor" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+					<h5 class="text-xl font-semibold pb-3">Corona</h5>
+					<p class="px-4 text-justify">Se le colocó una corona dental de porcelana sobre metal para restaurar la forma y función del diente. La corona se ajustó adecuadamente y se logró una estética natural, proporcionando una solución duradera y estéticamente satisfactoria para el paciente.</p>
+				</div>
+			</article>
+			<article class=" flex justify-center items-center flex-col relative">
+				<img src='/caso-3.png' alt="Caso de Éxito" class=" object-cover transition-all duration-300">
+				<a id='caso4' class="-translate-y-20 border-2 italic border-white py-[5px] px-[25px] text-center rounded-full lg:opacity-0" title="Ver más" rel="noopener noreferrer">Blanqueamiento</a>
+				<div class="absolute top-0 right-0 altura w-full bg-black/70 flex justify-center items-center flex-col modal" id='modal4'>
+					<svg id="close4" class="w-6 absolute top-3 right-3 transition-all cursor-pointer hover:transition-all hover:fill-red-500" xmlns="http://www.w3.org/2000/svg" fill="CurrentColor" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+					<h5 class="text-xl font-semibold pb-3">Blanquemiento</h5>
+					<p class="px-4 text-justify">Se realizó un procedimiento de blanqueamiento dental con peróxido de carbamida al 20%. Tras varias sesiones, se logró una notable mejora en el color de los dientes, obteniendo un resultado más blanco y brillante.</p>
+				</div>
+			</article>
 		</div>
 	</section>
 	<Dentist />
-	<section class="w-full flex justify-center items-center flex-col mt-3 px-4">
+	<section class="w-full flex justify-center items-center flex-col mt-12 px-4">
 		<h3 class="text-center text-4xl font-semibold md:text-6xl md:mb-5">¿Por qué elegir Clear Dental?</h3>
 		<div class="w-full max-w-screen-xl grid grid-cols-1 gap-8 my-6 place-items-center md:grid-cols-3 md:items-start">
 			<Feature
@@ -66,4 +86,58 @@ import Footer from '../components/Footer.astro';
 	<Direction />
 	<Footer />
 </Layout>
+<style>
+	.altura {
+		height: calc(100% - 37px);
+	}
+  img {
+    transition: all 0.275s ease-in-out;
+  }
+  a {
+    transition: all 0.275s ease-in-out;
+    cursor: pointer;
+  }
+  img:hover ~ a {
+    opacity: 1;
+    transition: all 0.275s ease-in-out;
+    -webkit-box-shadow: 0px 0px 30px 10px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 30px 10px rgba(255,255,255,1);
+    box-shadow: 0px 0px 30px 10px rgba(255,255,255,1);
+  }
+  a:hover {
+    opacity: 1;
+    transition: all 0.275s ease-in-out;
+    -webkit-box-shadow: 0px 0px 30px 10px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 30px 10px rgba(255,255,255,1);
+    box-shadow: 0px 0px 30px 10px rgba(255,255,255,1);
+  }
+  .modal {
+    transition: all 0.2s ease-out;
+    transform: scale(0);
+  }
+  .show {
+    transition: all 0.2s ease-out;
+    transform: scale(1);
+  }
+</style>
+<script>
+	const modales:any = []
+	const show:any = []
+	const cerrar:any = []
 
+	for (let i = 1; i <= 4; i++) {
+		modales[i] = document.getElementById('modal'+i)
+		show[i] = document.getElementById('caso'+i);
+		cerrar[i] = document.getElementById('close'+i);
+		show[i]?.addEventListener('click', () => {
+			modales[i].classList.add('show')
+		})
+		cerrar[i]?.addEventListener('click', () => {
+			modales[i].classList.remove('show')
+		})
+		modales[i]?.addEventListener('click', () => {
+			modales[i].classList.remove('show')
+		})
+	}
+	
+</script>

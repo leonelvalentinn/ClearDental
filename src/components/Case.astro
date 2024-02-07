@@ -2,12 +2,18 @@
 interface Props {
   tratamiento: string
   img: string
+  text: string
 }
-const { tratamiento, img } = Astro.props
+const { tratamiento, img, text } = Astro.props
 ---
-<article class=" flex justify-center items-center flex-col">
+<article class=" flex justify-center items-center flex-col relative">
   <img src={img} alt="Caso de Éxito" class=" object-cover transition-all duration-300">
-  <a class="-translate-y-20 border-2 italic border-white py-[5px] px-[25px] text-center rounded-full lg:opacity-0" href="https://wa.me/525539245789?text=Buenas%20tardes,%20solicito%20informaci%C3%B3n%20sobre" target="_blank" rel="noopener noreferrer">{tratamiento}</a>
+  <a id={tratamiento + '1'} class="-translate-y-20 border-2 italic border-white py-[5px] px-[25px] text-center rounded-full lg:opacity-0" title="Ver más" rel="noopener noreferrer">{tratamiento}</a>
+  <div class="absolute top-0 right-0 h-full w-full bg-black/70 flex justify-center items-center flex-col modal" id={tratamiento}>
+    <svg id="close" class="w-6 absolute top-3 right-3 transition-all cursor-pointer hover:transition-all hover:fill-red-500" xmlns="http://www.w3.org/2000/svg" fill="CurrentColor" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+    <h5 class="text-xl font-semibold pb-3">{tratamiento}</h5>
+    <p class="text-lg font-medium px-4 text-justify">{text}</p>
+  </div>
 </article>
 <style>
   img {
@@ -15,6 +21,7 @@ const { tratamiento, img } = Astro.props
   }
   a {
     transition: all 0.275s ease-in-out;
+    cursor: pointer;
   }
   img:hover ~ a {
     opacity: 1;
@@ -30,4 +37,21 @@ const { tratamiento, img } = Astro.props
     -moz-box-shadow: 0px 0px 30px 10px rgba(255,255,255,1);
     box-shadow: 0px 0px 30px 10px rgba(255,255,255,1);
   }
+  .modal {
+    transition: all 0.2s ease-out;
+    transform: scale(0);
+  }
+  .show {
+    transition: all 0.2s ease-out;
+    transform: scale(1);
+  }
 </style>
+<script>
+  const cerrar = document.getElementById('close')
+  const show = document.getElementById('1')
+  const modal = document.getElementById('Limpieza')
+  
+  show?.addEventListener('click', () => {
+    modal?.classList.add('show')
+  })
+</script>
