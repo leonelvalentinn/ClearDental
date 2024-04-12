@@ -7,40 +7,38 @@ import Service from "./Service.astro";
     <div class="flex justify-center items-center flex-col md:grid md:grid-cols-2 md:gap-5 md:place-items-start">
       <h2 class="font-semibold text-4xl mb-4 md:hidden">Nuestros Tratamientos</h2>
       <Service 
-        img="/smile-3.jpg"
+        img="/smile-3.webp"
         title="Blanqueamiento"
         text="El blanqueamiento dental es un procedimiento seguro y no invasivo que se realiza para eliminar manchas y decoloraciones en los dientes, mejorando su apariencia estética."
         subtitle="Nuestros Tratamientos"
+        width="1500"
+        height="1000"
       />    
       <Service 
-        img="/mandibula.jpg"
+        img="/mandibula.webp"
         title="Implantes"
         text="Un implante dental es una solución permanente y efectiva para reemplazar dientes perdidos. Consiste en un pequeño tornillo de titanio que se inserta en el hueso de la mandíbula, actuando como la raíz del diente."
+        width="1604"
+        height="1280"
       /> 
       <Service 
-        img="/smile.jpg"
+        img="/smile.webp"
         title="Diseño de sonrisa"
         text="El diseño de sonrisa es un proceso personalizado que busca mejorar la estética dental y facial de manera integral."
+        width="1400"
+        height="1280"
       /> 
       <Service 
-        img="/smile-2.jpg"
+        img="/smile-2.webp"
         title="Ortodoncia"
         text="La ortodoncia es un tratamiento dental que corrige la posición de los dientes y la mandíbula para mejorar la función masticatoria y la estética de la sonrisa."
+        width="1920"
+        height="1080"
       /> 
     </div>
     <div class="flex justify-center items-center flex-col md:flex-row md:mt-5">
-      <a class="py-[10px] px-[35px] bg-white rounded-full background text-black mb-3 md:mb-0 md:mr-5 " href="https://wa.me/525539245789?text=Buenas%20tardes,%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">Agenda</a>
-      <a class="py-[10px] px-[35px] bg-white rounded-full background text-black" href="https://wa.me/525539245789?text=Buenas%20tardes,%20solicito%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" id="Casos">Conoce más</a>
+      <a class="py-[10px] px-[35px] bg-white rounded-full transition hover:transition hover:scale-110 text-black mb-3 md:mb-0 md:mr-5 " href="https://wa.me/525539245789?text=Buenas%20tardes,%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">Agenda</a>
+      <a class="py-[10px] px-[35px] bg-white rounded-full transition hover:transition hover:scale-110 text-black" href="https://wa.me/525539245789?text=Buenas%20tardes,%20solicito%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" id="Casos">Conoce más</a>
     </div>
   </div>
 </section>
-
-<style>
-  .background {
-    transition: all 0.275s ease-in-out;
-  }
-  .background:hover {
-    transition: all 0.275s ease-in-out;
-    transform: scale(1.1);
-  }
-</style>

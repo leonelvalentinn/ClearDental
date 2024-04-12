@@ -9,7 +9,7 @@ const { number, title, text, id } = Astro.props
 ---
 
 <article class="flex justify-center items-center flex-col w-64 text-center" id={id}>
-  <h6 class="text-6xl font-semibold">{number}</h6>
-  <h4 class=" my-4 font-medium text-2xl text-yellow-600">{title}</h4>
+  <p class="text-6xl font-semibold">{number}</p>
+  <span class=" my-4 font-medium text-2xl text-yellow-600">{title}</span>
   <p>{text}</p>
 </article>
